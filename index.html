@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WISEM GLOBAL BUSINESS - Engineering Excellence in Nigerian Manufacturing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #121a20;
+            --color-accent: #f07b21;
+            --color-bg: #F2EDE6;
+            --color-text: #0D1117;
+            --color-surface: #162430;
+            --color-secondary-accent: #91aeb7;
+            --font-display: 'Russo One', sans-serif;
+            --font-body: 'Source Sans 3', sans-serif;
+            --border-radius: 0px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(18, 26, 32, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--color-accent);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--color-bg);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            width: 28px;
+            height: 3px;
+            background: var(--color-accent);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--color-primary);
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--color-bg);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Hero Section */
+        #hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 2;
+        }
+
+        .hero-diagonal {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 30%, var(--color-accent) 30.1%);
+            opacity: 0.12;
+            z-index: 3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 4;
+            text-align: center;
+            color: white;
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            line-height: 1.1;
+            text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-content .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+            font-weight: 600;
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--color-accent);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: var(--border-radius);
+            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 2rem;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        section:nth-child(2) { animation-delay: 0.1s; }
+        section:nth-child(3) { animation-delay: 0.2s; }
+        section:nth-child(4) { animation-delay: 0.3s; }
+
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: var(--color-accent);
+        }
+
+        /* About Section */
+        #about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            box-shadow: 8px 8px 0 var(--color-accent);
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-text);
+        }
+
+        /* Services Section */
+        #services {
+            background: var(--color-surface);
+            color: var(--color-bg);
+            position: relative;
+        }
+
+        #services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(240, 123, 33, 0.02) 10px,
+                rgba(240, 123, 33, 0.02) 20px
+            );
+            pointer-events: none;
+        }
+
+        #services h2 {
+            color: var(--color-accent);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card {
+            background: var(--color-primary);
+            padding: 2.5rem;
+            box-shadow: 6px 6px 0 rgba(240, 123, 33, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 8px 8px 0 rgba(240, 123, 33, 0.5);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-bg);
+        }
+
+        .services-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            margin-top: 3rem;
+            box-shadow: 8px 8px 0 var(--color-accent);
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--color-bg);
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-content p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            box-shadow: 4px 4px 0 var(--color-primary);
+        }
+
+        .contact-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        .contact-item a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-item p {
+            font-size: 1rem;
+            color: var(--color-text);
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+            margin-top: 2rem;
+        }
+
+        .whatsapp-button:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-image {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            object-fit: cover;
+            margin: 3rem auto 0;
+            box-shadow: 8px 8px 0 var(--color-accent);
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-primary);
+            color: var(--color-bg);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.5rem;
+            }
+
+            section h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            section {
+                padding: 48px 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-image {
+                height: 250px;
+            }
+
+            .contact-details {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-image {
+                height: 250px;
+            }
+
+            .hero-diagonal {
+                width: 100%;
+                background: linear-gradient(135deg, transparent 60%, var(--color-accent) 60.1%);
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">WISEM GLOBAL</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <img src="https://images.pexels.com/photos/3089681/pexels-photo-3089681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="WISEM GLOBAL BUSINESS Manufacturing" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-diagonal"></div>
+        <div class="hero-content">
+            <h1>WISEM GLOBAL BUSINESS</h1>
+            <div class="tagline">Engineering Excellence in Nigerian Manufacturing</div>
+            <p>Your Trusted Manufacturing Partner in Ogun State. Delivering quality engineered solutions with precision and reliability. Based in Sagamu, serving Nigeria and beyond.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="https://images.pexels.com/photos/31090802/pexels-photo-31090802.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="WISEM GLOBAL BUSINESS Team" class="about-image">
+                <div class="about-text">
+                    <p>WISEM GLOBAL BUSINESS is a manufacturing company committed to delivering world-class products and services to the Nigerian market. Located in the heart of Ogun State's industrial corridor in Sagamu, we combine modern manufacturing techniques with local expertise to meet the diverse needs of our clients across various sectors. Our strategic location near NNPC Estate, Mosimi provides us with excellent logistics access, enabling us to serve customers efficiently throughout Nigeria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Custom Manufacturing</h3>
+                    <p>Tailored manufacturing solutions designed to meet your specific business requirements with precision and quality.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Product Development</h3>
+                    <p>From concept to completion, we guide your product through every stage of development with expert engineering support.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Quality Assurance</h3>
+                    <p>Rigorous quality control processes ensuring every product meets international standards and client specifications.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Supply Chain Management</h3>
+                    <p>Efficient logistics and supply chain solutions to ensure timely delivery across Nigeria and beyond.</p>
+                </div>
+            </div>
+            <p style="margin-top: 3rem; font-size: 1.1rem; line-height: 1.8;">At WISEM GLOBAL BUSINESS, we provide comprehensive manufacturing solutions tailored to meet your specific requirements. Our services include custom manufacturing, product development, quality assurance, and supply chain management. We work with businesses across multiple sectors, ensuring that every project meets international standards while remaining cost-effective for the Nigerian market. Our experienced team handles projects from concept to delivery, maintaining the highest standards of quality and efficiency throughout the manufacturing process.</p>
+            <img src="https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="WISEM GLOBAL BUSINESS Manufacturing Process" class="services-image">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <p>Ready to discuss your manufacturing needs? Get in touch with WISEM GLOBAL BUSINESS today. Our team is available to answer your questions and provide customized solutions for your business. Visit us at our facility in Sagamu or reach out via phone, email, or WhatsApp for immediate assistance.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <a href="tel:+2348038292418">08038292418</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <a href="mailto:info@wisemglobal.com">info@wisemglobal.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Address</h3>
+                        <p>Cabin 5, NNPC Estate, Mosimi, Sagamu, Ogun State, Nigeria</p>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/2348038292418" class="whatsapp-button" target="_blank">Message Us on WhatsApp</a>
+
+                <img src="https://images.pexels.com/photos/19893586/pexels-photo-19893586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="WISEM GLOBAL BUSINESS Location" class="contact-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 WISEM GLOBAL BUSINESS. All rights reserved.</p>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2348038292418" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 32 32">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.26 1.408 1.415-5.267-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.938 0-7.453 6.061-13.514 13.514-13.514 7.453 0 13.514 6.061 13.514 13.514 0 7.453-6.061 13.467-13.467 13.467zM21.52 18.867c-0.37-0.185-2.169-1.070-2.506-1.193-0.338-0.123-0.584-0.185-0.83 0.185-0.246 0.37-0.953 1.193-1.169 1.438-0.215 0.246-0.43 0.277-0.8 0.092-0.37-0.185-1.564-0.577-2.978-1.838-1.101-0.982-1.846-2.195-2.061-2.565-0.215-0.37-0.023-0.57 0.162-0.755 0.166-0.166 0.37-0.43 0.554-0.646 0.185-0.215 0.246-0.37 0.37-0.616 0.123-0.246 0.061-0.461-0.031-0.646-0.092-0.185-0.83-2.001-1.138-2.74-0.3-0.72-0.607-0.623-0.83-0.634-0.215-0.010-0.461-0.012-0.707-0.012s-0.646 0.092-0.984 0.461c-0.338 0.37-1.291 1.262-1.291 3.078s1.322 3.571 1.507 3.816c0.185 0.246 2.604 3.978 6.311 5.578 0.881 0.381 1.568 0.609 2.105 0.779 0.885 0.281 1.69 0.241 2.327 0.146 0.71-0.106 2.169-0.886 2.475-1.741 0.307-0.856 0.307-1.587 0.215-1.741-0.092-0.154-0.338-0.246-0.708-0.431z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
