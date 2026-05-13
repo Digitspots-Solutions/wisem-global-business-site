@@ -1,0 +1,42 @@
+{
+  "businessName": "WISEM GLOBAL BUSINESS",
+  "industry": "Manufacturing",
+  "tone": "professional",
+  "tagline": "Engineering Excellence in Nigerian Manufacturing",
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "copy": "WISEM GLOBAL BUSINESS - Your Trusted Manufacturing Partner in Ogun State. Delivering quality engineered solutions with precision and reliability. Based in Sagamu, serving Nigeria and beyond.",
+      "imagePrompt": "Modern Nigerian manufacturing facility exterior, industrial buildings with clean lines, blue sky, professional workers in safety gear visible in foreground, Ogun State landscape, photorealistic, high quality, corporate photography style",
+      "layout": "centered"
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "copy": "WISEM GLOBAL BUSINESS is a manufacturing company committed to delivering world-class products and services to the Nigerian market. Located in the heart of Ogun State's industrial corridor in Sagamu, we combine modern manufacturing techniques with local expertise to meet the diverse needs of our clients across various sectors. Our strategic location near NNPC Estate, Mosimi provides us with excellent logistics access, enabling us to serve customers efficiently throughout Nigeria.",
+      "imagePrompt": "Nigerian manufacturing team in modern facility, diverse workers collaborating around machinery, clean industrial interior with good lighting, safety equipment visible, professional atmosphere, photorealistic",
+      "layout": "split"
+    },
+    {
+      "id": "services",
+      "name": "Our Services",
+      "copy": "At WISEM GLOBAL BUSINESS, we provide comprehensive manufacturing solutions tailored to meet your specific requirements. Our services include custom manufacturing, product development, quality assurance, and supply chain management. We work with businesses across multiple sectors, ensuring that every project meets international standards while remaining cost-effective for the Nigerian market. Our experienced team handles projects from concept to delivery, maintaining the highest standards of quality and efficiency throughout the manufacturing process.",
+      "imagePrompt": "Grid of manufacturing processes: CNC machines in operation, quality control inspection, product assembly line, warehouse logistics, all in modern Nigerian industrial setting, bright professional lighting, photorealistic",
+      "layout": "grid"
+    },
+    {
+      "id": "contact",
+      "name": "Contact Us",
+      "copy": "Ready to discuss your manufacturing needs? Get in touch with WISEM GLOBAL BUSINESS today. Our team is available to answer your questions and provide customized solutions for your business. Visit us at our facility in Sagamu or reach out via phone, email, or WhatsApp for immediate assistance.",
+      "imagePrompt": "Professional Nigerian business office reception area, modern furniture, welcoming atmosphere, natural light, map of Nigeria on wall, corporate setting, photorealistic",
+      "layout": "centered"
+    }
+  ],
+  "contact": {
+    "phone": "08038292418",
+    "email": "info@wisemglobal.com",
+    "address": "Cabin 5, NNPC Estate, Mosimi, Sagamu, Ogun State, Nigeria",
+    "whatsapp": "https://wa.me/2348038292418"
+  }
+}
