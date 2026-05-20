@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WISEM GLOBAL BUSINESS - Engineering Excellence in Nigerian Manufacturing</title>
+    <title>Eddie Dee Energy Resources Limited - Engineering Excellence in Nigeria's Energy Sector</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-primary: #121a20;
-            --color-accent: #f07b21;
-            --color-bg: #F2EDE6;
-            --color-text: #0D1117;
-            --color-surface: #162430;
-            --color-secondary-accent: #91aeb7;
-            --font-display: 'Russo One', sans-serif;
-            --font-body: 'Source Sans 3', sans-serif;
-            --border-radius: 0px;
+            --color-primary: #03060a;
+            --color-accent: #ae7f0e;
+            --color-bg: #F6F4EE;
+            --color-text: #080E18;
+            --color-surface: #0b121d;
+            --color-secondary-accent: #6b7f82;
+            --font-display: 'EB Garamond', serif;
+            --font-body: 'DM Sans', sans-serif;
+            --border-radius: 2px;
         }
 
         * {
@@ -35,27 +35,43 @@
             color: var(--color-text);
             background-color: var(--color-bg);
             line-height: 1.6;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.015) 2px, rgba(0,0,0,0.015) 4px);
         }
 
         h1, h2, h3, h4 {
             font-family: var(--font-display);
-            font-weight: 400;
-            letter-spacing: 0.5px;
+            font-weight: 500;
+            line-height: 1.2;
         }
 
-        /* Navigation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
         nav {
             position: sticky;
             top: 0;
-            background: rgba(18, 26, 32, 0.95);
+            background: rgba(246, 244, 238, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(174, 127, 14, 0.15);
+        }
+
+        nav.animated {
+            animation: fadeUp 0.6s ease forwards;
         }
 
         .nav-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
@@ -63,12 +79,13 @@
             align-items: center;
         }
 
-        .nav-brand {
+        .nav-logo {
             font-family: var(--font-display);
             font-size: 1.3rem;
-            color: var(--color-accent);
+            font-weight: 700;
+            color: var(--color-primary);
             text-decoration: none;
-            letter-spacing: 1px;
+            letter-spacing: -0.02em;
         }
 
         .nav-links {
@@ -78,53 +95,35 @@
         }
 
         .nav-links a {
-            color: var(--color-bg);
             text-decoration: none;
-            font-weight: 600;
+            color: var(--color-text);
+            font-weight: 400;
             font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
             transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--color-accent);
-            transition: width 0.3s ease;
+            letter-spacing: 0.01em;
         }
 
         .nav-links a:hover {
             color: var(--color-accent);
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
         .mobile-menu-btn {
             display: none;
             flex-direction: column;
             cursor: pointer;
-            gap: 5px;
-            z-index: 1001;
+            gap: 4px;
         }
 
         .mobile-menu-btn span {
-            width: 28px;
+            width: 25px;
             height: 3px;
-            background: var(--color-accent);
+            background: var(--color-text);
             transition: all 0.3s ease;
             transform-origin: center;
         }
 
         .mobile-menu-btn.active span:nth-child(1) {
-            transform: rotate(45deg) translate(7px, 7px);
+            transform: rotate(45deg) translate(6px, 6px);
         }
 
         .mobile-menu-btn.active span:nth-child(2) {
@@ -132,7 +131,7 @@
         }
 
         .mobile-menu-btn.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
+            transform: rotate(-45deg) translate(6px, -6px);
         }
 
         .mobile-menu {
@@ -141,8 +140,8 @@
             right: -100%;
             width: 300px;
             height: calc(100vh - 70px);
-            background: var(--color-primary);
-            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+            background: var(--color-bg);
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
             transition: right 0.3s ease;
             z-index: 999;
             padding: 2rem;
@@ -162,11 +161,9 @@
 
         .mobile-menu ul a {
             text-decoration: none;
-            color: var(--color-bg);
+            color: var(--color-text);
             font-size: 1.1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-weight: 500;
             transition: color 0.3s ease;
             display: block;
             padding: 0.5rem 0;
@@ -176,27 +173,17 @@
             color: var(--color-accent);
         }
 
-        /* Animations */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(24px);
-            }
-            to {
-                opacity: 1;
-                transform: none;
-            }
-        }
-
-        /* Hero Section */
         #hero {
             position: relative;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
+            color: white;
             overflow: hidden;
             animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0s;
         }
 
         .hero-image {
@@ -215,284 +202,246 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.55);
+            background: rgba(3, 6, 10, 0.55);
             z-index: 2;
-        }
-
-        .hero-diagonal {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(135deg, transparent 30%, var(--color-accent) 30.1%);
-            opacity: 0.12;
-            z-index: 3;
         }
 
         .hero-content {
             position: relative;
-            z-index: 4;
-            text-align: center;
-            color: white;
-            max-width: 1200px;
+            z-index: 3;
+            max-width: 900px;
             padding: 0 2rem;
         }
 
         .hero-content h1 {
             font-size: 4rem;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            line-height: 1.1;
-            text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.8);
+            margin-bottom: 1rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
         }
 
         .hero-content .tagline {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
             color: var(--color-accent);
-            font-weight: 600;
-            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+            font-family: var(--font-display);
+            font-style: italic;
         }
 
         .hero-content p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 2.5rem;
-            max-width: 800px;
+            line-height: 1.7;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            font-weight: 300;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 1.2rem 3rem;
+            padding: 1rem 2.5rem;
             background: var(--color-accent);
             color: white;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             border-radius: var(--border-radius);
-            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
-            transition: all 0.2s ease;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            letter-spacing: 0.02em;
         }
 
         .cta-button:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+            background: #c99010;
+            transform: translateY(-2px);
         }
 
-        /* Section Styles */
         section {
             padding: 80px 2rem;
             animation: fadeUp 0.6s ease forwards;
         }
 
-        section:nth-child(2) { animation-delay: 0.1s; }
-        section:nth-child(3) { animation-delay: 0.2s; }
-        section:nth-child(4) { animation-delay: 0.3s; }
+        #about {
+            animation-delay: 0.1s;
+        }
 
-        .section-container {
-            max-width: 1400px;
+        #services {
+            animation-delay: 0.2s;
+        }
+
+        #team {
+            animation-delay: 0.3s;
+        }
+
+        #contact {
+            animation-delay: 0.4s;
+        }
+
+        .section-divider {
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--color-accent), transparent);
+        }
+
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        section h2 {
-            font-size: 3rem;
+        .section-title {
+            font-size: 2.8rem;
             margin-bottom: 3rem;
             color: var(--color-primary);
-            text-transform: uppercase;
-            position: relative;
-            display: inline-block;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: -0.02em;
         }
 
-        section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60%;
-            height: 4px;
-            background: var(--color-accent);
-        }
-
-        /* About Section */
-        #about {
-            background: white;
-        }
-
-        .about-content {
+        .split-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
 
-        .about-image {
+        .split-layout img {
             width: 100%;
             height: 500px;
             object-fit: cover;
-            box-shadow: 8px 8px 0 var(--color-accent);
+            border-radius: var(--border-radius);
         }
 
-        .about-text p {
-            font-size: 1.1rem;
+        .split-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .split-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
             line-height: 1.8;
-            color: var(--color-text);
-        }
-
-        /* Services Section */
-        #services {
-            background: var(--color-surface);
-            color: var(--color-bg);
-            position: relative;
-        }
-
-        #services::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(240, 123, 33, 0.02) 10px,
-                rgba(240, 123, 33, 0.02) 20px
-            );
-            pointer-events: none;
-        }
-
-        #services h2 {
-            color: var(--color-accent);
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            position: relative;
-            z-index: 1;
+            gap: 2.5rem;
+            margin-top: 3rem;
         }
 
         .service-card {
-            background: var(--color-primary);
-            padding: 2.5rem;
-            box-shadow: 6px 6px 0 rgba(240, 123, 33, 0.3);
-            transition: all 0.3s ease;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border-left: 3px solid var(--color-accent);
+            transition: transform 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 8px 8px 0 rgba(240, 123, 33, 0.5);
+            transform: translateY(-5px);
         }
 
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--color-accent);
+            color: var(--color-primary);
         }
 
         .service-card p {
             font-size: 1rem;
             line-height: 1.7;
-            color: var(--color-bg);
+            color: var(--color-secondary-accent);
         }
 
-        .services-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            margin-top: 3rem;
-            box-shadow: 8px 8px 0 var(--color-accent);
-        }
-
-        /* Contact Section */
-        #contact {
-            background: var(--color-bg);
+        .team-content {
+            max-width: 900px;
+            margin: 0 auto;
             text-align: center;
         }
 
-        .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .team-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-primary);
         }
 
-        .contact-content p {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
+        .team-content p {
+            font-size: 1.05rem;
             line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-image {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .contact-info p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
         }
 
         .contact-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border-left: 3px solid var(--color-accent);
+        }
+
+        .contact-details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
         }
 
         .contact-item {
-            background: white;
-            padding: 2rem;
-            box-shadow: 4px 4px 0 var(--color-primary);
+            margin-bottom: 1.5rem;
         }
 
-        .contact-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+        .contact-item strong {
+            display: block;
+            margin-bottom: 0.3rem;
             color: var(--color-primary);
+            font-weight: 500;
         }
 
         .contact-item a {
             color: var(--color-accent);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
+            transition: color 0.3s ease;
         }
 
         .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-item p {
-            font-size: 1rem;
-            color: var(--color-text);
-        }
-
-        .whatsapp-button {
-            display: inline-block;
-            padding: 1.2rem 3rem;
-            background: #25D366;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
-            transition: all 0.2s ease;
-            margin-top: 2rem;
-        }
-
-        .whatsapp-button:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+            color: #c99010;
         }
 
         .contact-image {
             width: 100%;
-            max-width: 800px;
-            height: 400px;
+            height: 500px;
             object-fit: cover;
-            margin: 3rem auto 0;
-            box-shadow: 8px 8px 0 var(--color-accent);
+            border-radius: var(--border-radius);
         }
 
-        /* WhatsApp Floating Button */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -504,62 +453,45 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             z-index: 999;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
             text-decoration: none;
         }
 
         .whatsapp-float:hover {
             transform: scale(1.1);
-            box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.4);
         }
 
         .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
+            width: 32px;
+            height: 32px;
             fill: white;
         }
 
-        /* Footer */
         footer {
-            background: var(--color-primary);
+            background: var(--color-surface);
             color: var(--color-bg);
             text-align: center;
             padding: 2rem;
-            font-size: 0.95rem;
+            margin-top: 4rem;
         }
 
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-
-            .hero-content .tagline {
-                font-size: 1.5rem;
-            }
-
-            section h2 {
-                font-size: 2.5rem;
-            }
+        footer p {
+            font-size: 0.95rem;
         }
 
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-
+            
             .mobile-menu-btn {
                 display: flex;
             }
 
-            section {
-                padding: 48px 1.5rem;
-            }
-
             .hero-content h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
 
             .hero-content .tagline {
@@ -570,39 +502,39 @@
                 font-size: 1rem;
             }
 
-            section h2 {
-                font-size: 2rem;
-                margin-bottom: 2rem;
+            section {
+                padding: 48px 1.5rem;
             }
 
-            .about-content {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .split-layout {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
-            .about-image {
+            .split-layout img {
                 height: 300px;
             }
 
             .services-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
-            .services-image {
-                height: 250px;
-            }
-
-            .contact-details {
+            .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .contact-image {
-                height: 250px;
+                height: 300px;
             }
 
-            .hero-diagonal {
-                width: 100%;
-                background: linear-gradient(135deg, transparent 60%, var(--color-accent) 60.1%);
+            .team-image {
+                height: 300px;
             }
 
             .whatsapp-float {
@@ -613,155 +545,205 @@
             }
 
             .whatsapp-float svg {
-                width: 28px;
-                height: 28px;
+                width: 26px;
+                height: 26px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .nav-container {
+                padding: 0 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            section {
+                padding: 60px 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="#hero" class="nav-brand">WISEM GLOBAL</a>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <ul>
+<nav class="animated">
+    <div class="nav-container">
+        <a href="#hero" class="nav-logo">Eddie Dee Energy</a>
+        <ul class="nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#team">Expertise</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
+</nav>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <img src="https://images.pexels.com/photos/3089681/pexels-photo-3089681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="WISEM GLOBAL BUSINESS Manufacturing" class="hero-image">
-        <div class="hero-overlay"></div>
-        <div class="hero-diagonal"></div>
-        <div class="hero-content">
-            <h1>WISEM GLOBAL BUSINESS</h1>
-            <div class="tagline">Engineering Excellence in Nigerian Manufacturing</div>
-            <p>Your Trusted Manufacturing Partner in Ogun State. Delivering quality engineered solutions with precision and reliability. Based in Sagamu, serving Nigeria and beyond.</p>
-            <a href="#contact" class="cta-button">Get Started</a>
-        </div>
-    </section>
+<div class="mobile-menu">
+    <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Expertise</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="section-container">
-            <h2>About Us</h2>
-            <div class="about-content">
-                <img src="https://images.pexels.com/photos/31090802/pexels-photo-31090802.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="WISEM GLOBAL BUSINESS Team" class="about-image">
-                <div class="about-text">
-                    <p>WISEM GLOBAL BUSINESS is a manufacturing company committed to delivering world-class products and services to the Nigerian market. Located in the heart of Ogun State's industrial corridor in Sagamu, we combine modern manufacturing techniques with local expertise to meet the diverse needs of our clients across various sectors. Our strategic location near NNPC Estate, Mosimi provides us with excellent logistics access, enabling us to serve customers efficiently throughout Nigeria.</p>
-                </div>
+<section id="hero">
+    <img src="https://images.pexels.com/photos/18115376/pexels-photo-18115376.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Eddie Dee Energy Resources" class="hero-image">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Eddie Dee Energy Resources Limited</h1>
+        <p class="tagline">Engineering Excellence in Nigeria's Energy Sector</p>
+        <p>Leading provider of comprehensive petroleum engineering services and energy solutions across Nigeria. With deep technical expertise and a commitment to operational excellence, we deliver reliable energy services that power progress.</p>
+        <a href="#contact" class="cta-button">Get In Touch</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="section-divider"></div>
+    <div class="container">
+        <div class="split-layout">
+            <img src="https://images.pexels.com/photos/8729922/pexels-photo-8729922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="About Eddie Dee Energy Resources">
+            <div class="split-content">
+                <h2>About Eddie Dee Energy Resources Limited</h2>
+                <p>Eddie Dee Energy Resources Limited (also trading as Eddie Dee Petroleum Services Co) is a leading Nigerian oil and gas services company headquartered in Sagamu, Ogun State. Founded and led by experienced petroleum engineers, we bring world-class technical expertise to Nigeria's dynamic energy sector.</p>
+                <p>Our company is built on a foundation of engineering excellence, safety consciousness, and unwavering commitment to client satisfaction. We understand the unique challenges of operating in Nigeria's oil and gas industry and provide solutions that are both technically sound and commercially viable.</p>
+                <p>With our strategic location in Ogun State and deep knowledge of Nigerian petroleum operations, we serve clients across the upstream, midstream, and downstream sectors. Our team combines international best practices with local expertise to deliver exceptional results on every project.</p>
+                <p>At Eddie Dee Energy Resources, we don't just provide services—we build lasting partnerships with our clients, supporting their growth and contributing to Nigeria's energy independence.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="section-container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Custom Manufacturing</h3>
-                    <p>Tailored manufacturing solutions designed to meet your specific business requirements with precision and quality.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Product Development</h3>
-                    <p>From concept to completion, we guide your product through every stage of development with expert engineering support.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Quality Assurance</h3>
-                    <p>Rigorous quality control processes ensuring every product meets international standards and client specifications.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Supply Chain Management</h3>
-                    <p>Efficient logistics and supply chain solutions to ensure timely delivery across Nigeria and beyond.</p>
-                </div>
+<section id="services">
+    <div class="section-divider"></div>
+    <div class="container">
+        <h2 class="section-title">Comprehensive Petroleum Engineering Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Petroleum Engineering Consultancy</h3>
+                <p>Expert technical advisory services covering reservoir engineering, production optimization, well design, and field development planning. Our petroleum engineers provide data-driven insights to maximize asset value and operational efficiency.</p>
             </div>
-            <p style="margin-top: 3rem; font-size: 1.1rem; line-height: 1.8;">At WISEM GLOBAL BUSINESS, we provide comprehensive manufacturing solutions tailored to meet your specific requirements. Our services include custom manufacturing, product development, quality assurance, and supply chain management. We work with businesses across multiple sectors, ensuring that every project meets international standards while remaining cost-effective for the Nigerian market. Our experienced team handles projects from concept to delivery, maintaining the highest standards of quality and efficiency throughout the manufacturing process.</p>
-            <img src="https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="WISEM GLOBAL BUSINESS Manufacturing Process" class="services-image">
+            <div class="service-card">
+                <h3>Energy Solutions & Supply</h3>
+                <p>Reliable supply of petroleum products and energy solutions tailored to industrial, commercial, and institutional clients across Nigeria. We ensure consistent product quality and timely delivery.</p>
+            </div>
+            <div class="service-card">
+                <h3>Technical Training & Capacity Building</h3>
+                <p>Specialized training programs for oil and gas professionals, covering industry best practices, safety protocols, and emerging technologies in the petroleum sector.</p>
+            </div>
+            <div class="service-card">
+                <h3>Project Management Services</h3>
+                <p>End-to-end project management for oil and gas operations, from feasibility studies and engineering design to execution and commissioning. We deliver projects on time and within budget.</p>
+            </div>
+            <div class="service-card">
+                <h3>Equipment Supply & Maintenance</h3>
+                <p>Procurement and maintenance of petroleum industry equipment, tools, and technologies. We source quality equipment and provide ongoing technical support.</p>
+            </div>
+            <div class="service-card">
+                <h3>Health, Safety & Environmental Services</h3>
+                <p>Comprehensive HSE management services ensuring compliance with Nigerian and international standards. We prioritize safety in all operations while minimizing environmental impact.</p>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="section-container">
-            <h2>Contact Us</h2>
-            <div class="contact-content">
-                <p>Ready to discuss your manufacturing needs? Get in touch with WISEM GLOBAL BUSINESS today. Our team is available to answer your questions and provide customized solutions for your business. Visit us at our facility in Sagamu or reach out via phone, email, or WhatsApp for immediate assistance.</p>
-                
+<section id="team">
+    <div class="section-divider"></div>
+    <div class="container">
+        <div class="team-content">
+            <h2>Led by Experienced Petroleum Engineers</h2>
+            <p>Eddie Dee Energy Resources Limited is led by qualified petroleum engineers with extensive experience in Nigeria's oil and gas industry. Our leadership team brings decades of combined expertise in petroleum engineering, operations management, and business development.</p>
+            <img src="https://images.pexels.com/photos/35503893/pexels-photo-35503893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Eddie Dee Energy Team" class="team-image">
+            <p>Our founder's background as a practicing petroleum engineer ensures that technical excellence remains at the core of everything we do. This engineering-first approach means our clients benefit from solutions that are not only commercially sound but technically robust.</p>
+            <p>We maintain a team of skilled professionals including petroleum engineers, process engineers, HSE specialists, and project managers—all committed to delivering world-class service to Nigeria's energy sector.</p>
+            <p>Our team stays current with industry developments through continuous professional development and maintains memberships in relevant professional bodies. This commitment to excellence has earned us the trust of clients across Nigeria's oil and gas industry.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="section-divider"></div>
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Partner With Us</h2>
+                <p>Ready to discuss your petroleum engineering needs or energy solutions requirements? Eddie Dee Energy Resources Limited is here to support your operations with technical excellence and reliable service.</p>
+                <p>Our team is available to provide consultations, project quotations, and technical advisory services. Whether you're planning a new project or seeking to optimize existing operations, we bring the expertise and commitment to help you succeed.</p>
+                <p>Visit our office in Sagamu, Ogun State, or reach out through any of the channels below. We look forward to partnering with you.</p>
                 <div class="contact-details">
+                    <h3>Eddie Dee Energy Resources Limited</h3>
                     <div class="contact-item">
-                        <h3>Phone</h3>
-                        <a href="tel:+2348038292418">08038292418</a>
+                        <strong>Address:</strong>
+                        Cabin 5, NNPC Estate, Mosimi<br>
+                        Sagamu, Ogun State, Nigeria
                     </div>
                     <div class="contact-item">
-                        <h3>Email</h3>
-                        <a href="mailto:info@wisemglobal.com">info@wisemglobal.com</a>
+                        <strong>Phone:</strong>
+                        <a href="tel:+2348038292418">+234 803 829 2418</a>
                     </div>
                     <div class="contact-item">
-                        <h3>Address</h3>
-                        <p>Cabin 5, NNPC Estate, Mosimi, Sagamu, Ogun State, Nigeria</p>
+                        <strong>Email:</strong>
+                        <a href="mailto:info@eddiedee.org">info@eddiedee.org</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Website:</strong>
+                        <a href="https://www.eddiedee.org" target="_blank">www.eddiedee.org</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Business Hours:</strong>
+                        Monday - Friday: 8:00 AM - 5:00 PM<br>
+                        Saturday: 9:00 AM - 2:00 PM
                     </div>
                 </div>
-
-                <a href="https://wa.me/2348038292418" class="whatsapp-button" target="_blank">Message Us on WhatsApp</a>
-
-                <img src="https://images.pexels.com/photos/19893586/pexels-photo-19893586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="WISEM GLOBAL BUSINESS Location" class="contact-image">
             </div>
+            <img src="https://images.pexels.com/photos/18852686/pexels-photo-18852686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Contact Eddie Dee Energy" class="contact-image">
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 WISEM GLOBAL BUSINESS. All rights reserved.</p>
-    </footer>
+<a href="https://wa.me/2348038292418" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.188-2.113c2.324 1.188 4.913 1.813 7.813 1.813 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.338c-2.413 0-4.775-0.65-6.837-1.888l-0.488-0.288-5.05 1.3 1.325-4.925-0.325-0.513c-1.375-2.175-2.1-4.7-2.1-7.287 0-7.512 6.113-13.625 13.625-13.625s13.625 6.113 13.625 13.625-6.113 13.625-13.625 13.625zM22.588 18.938c-0.4-0.2-2.363-1.175-2.738-1.3-0.363-0.138-0.625-0.2-0.888 0.2s-1.025 1.3-1.25 1.563c-0.225 0.263-0.45 0.3-0.85 0.1s-1.663-0.613-3.163-1.95c-1.175-1.038-1.963-2.325-2.188-2.725s-0.025-0.613 0.175-0.813c0.188-0.188 0.4-0.488 0.6-0.738 0.2-0.238 0.263-0.413 0.4-0.688 0.138-0.263 0.063-0.5-0.037-0.7s-0.888-2.138-1.213-2.925c-0.313-0.775-0.638-0.663-0.888-0.675-0.225-0.013-0.488-0.013-0.75-0.013s-0.675 0.1-1.038 0.488c-0.363 0.4-1.375 1.35-1.375 3.288s1.413 3.813 1.613 4.075c0.2 0.275 2.8 4.275 6.788 5.988 0.95 0.413 1.688 0.65 2.263 0.838 0.95 0.3 1.813 0.25 2.5 0.15 0.763-0.113 2.363-0.963 2.688-1.9 0.338-0.938 0.338-1.738 0.238-1.9-0.1-0.175-0.363-0.275-0.763-0.475z"/>
+    </svg>
+</a>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/2348038292418" class="whatsapp-float" target="_blank">
-        <svg viewBox="0 0 32 32">
-            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.26 1.408 1.415-5.267-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.938 0-7.453 6.061-13.514 13.514-13.514 7.453 0 13.514 6.061 13.514 13.514 0 7.453-6.061 13.467-13.467 13.467zM21.52 18.867c-0.37-0.185-2.169-1.070-2.506-1.193-0.338-0.123-0.584-0.185-0.83 0.185-0.246 0.37-0.953 1.193-1.169 1.438-0.215 0.246-0.43 0.277-0.8 0.092-0.37-0.185-1.564-0.577-2.978-1.838-1.101-0.982-1.846-2.195-2.061-2.565-0.215-0.37-0.023-0.57 0.162-0.755 0.166-0.166 0.37-0.43 0.554-0.646 0.185-0.215 0.246-0.37 0.37-0.616 0.123-0.246 0.061-0.461-0.031-0.646-0.092-0.185-0.83-2.001-1.138-2.74-0.3-0.72-0.607-0.623-0.83-0.634-0.215-0.010-0.461-0.012-0.707-0.012s-0.646 0.092-0.984 0.461c-0.338 0.37-1.291 1.262-1.291 3.078s1.322 3.571 1.507 3.816c0.185 0.246 2.604 3.978 6.311 5.578 0.881 0.381 1.568 0.609 2.105 0.779 0.885 0.281 1.69 0.241 2.327 0.146 0.71-0.106 2.169-0.886 2.475-1.741 0.307-0.856 0.307-1.587 0.215-1.741-0.092-0.154-0.338-0.246-0.708-0.431z"/>
-        </svg>
-    </a>
+<footer>
+    <p>&copy; 2024 Eddie Dee Energy Resources Limited. All rights reserved.</p>
+</footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const mobileMenu = document.querySelector('.mobile-menu');
+<script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
 
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenuBtn.classList.toggle('active');
-                mobileMenu.classList.toggle('active');
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
             });
+        });
+    }
+</script>
 
-            // Close mobile menu when clicking a link
-            const mobileLinks = mobileMenu.querySelectorAll('a');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenuBtn.classList.remove('active');
-                    mobileMenu.classList.remove('active');
-                });
-            });
-        }
-    </script>
 </body>
 </html>
