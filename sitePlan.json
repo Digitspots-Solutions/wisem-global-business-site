@@ -1,41 +1,48 @@
 {
-  "businessName": "WISEM GLOBAL BUSINESS",
-  "industry": "Manufacturing",
-  "tone": "professional",
-  "tagline": "Engineering Excellence in Nigerian Manufacturing",
+  "businessName": "Eddie Dee Energy Resources Limited",
+  "industry": "Oil & Gas",
+  "tone": "Professional, authoritative, and technically competent",
+  "tagline": "Engineering Excellence in Nigeria's Energy Sector",
   "sections": [
     {
       "id": "hero",
       "name": "Hero",
-      "copy": "WISEM GLOBAL BUSINESS - Your Trusted Manufacturing Partner in Ogun State. Delivering quality engineered solutions with precision and reliability. Based in Sagamu, serving Nigeria and beyond.",
-      "imagePrompt": "Modern Nigerian manufacturing facility exterior, industrial buildings with clean lines, blue sky, professional workers in safety gear visible in foreground, Ogun State landscape, photorealistic, high quality, corporate photography style",
+      "copy": "Eddie Dee Energy Resources Limited\n\nEngineering Excellence in Nigeria's Energy Sector\n\nLeading provider of comprehensive petroleum engineering services and energy solutions across Nigeria. With deep technical expertise and a commitment to operational excellence, we deliver reliable energy services that power progress.",
+      "imagePrompt": "Photorealistic wide shot of a modern Nigerian oil and gas facility at golden hour, with industrial pipelines, storage tanks, and technical equipment gleaming in warm sunlight, professional workers in safety gear visible in the background, clean industrial aesthetic with blue sky and hints of green Nigerian landscape, corporate photography style, high-end industrial photography",
       "layout": "centered"
     },
     {
       "id": "about",
       "name": "About Us",
-      "copy": "WISEM GLOBAL BUSINESS is a manufacturing company committed to delivering world-class products and services to the Nigerian market. Located in the heart of Ogun State's industrial corridor in Sagamu, we combine modern manufacturing techniques with local expertise to meet the diverse needs of our clients across various sectors. Our strategic location near NNPC Estate, Mosimi provides us with excellent logistics access, enabling us to serve customers efficiently throughout Nigeria.",
-      "imagePrompt": "Nigerian manufacturing team in modern facility, diverse workers collaborating around machinery, clean industrial interior with good lighting, safety equipment visible, professional atmosphere, photorealistic",
+      "copy": "About Eddie Dee Energy Resources Limited\n\nEddie Dee Energy Resources Limited (also trading as Eddie Dee Petroleum Services Co) is a leading Nigerian oil and gas services company headquartered in Sagamu, Ogun State. Founded and led by experienced petroleum engineers, we bring world-class technical expertise to Nigeria's dynamic energy sector.\n\nOur company is built on a foundation of engineering excellence, safety consciousness, and unwavering commitment to client satisfaction. We understand the unique challenges of operating in Nigeria's oil and gas industry and provide solutions that are both technically sound and commercially viable.\n\nWith our strategic location in Ogun State and deep knowledge of Nigerian petroleum operations, we serve clients across the upstream, midstream, and downstream sectors. Our team combines international best practices with local expertise to deliver exceptional results on every project.\n\nAt Eddie Dee Energy Resources, we don't just provide services—we build lasting partnerships with our clients, supporting their growth and contributing to Nigeria's energy independence.",
+      "imagePrompt": "Professional corporate photograph of a Nigerian petroleum engineering office, modern workspace with technical drawings and engineering equipment visible, diverse team of Nigerian engineers in business attire collaborating around a large table with petroleum industry documents and laptops, natural lighting through large windows, contemporary Nigerian office interior, corporate documentary style photography",
       "layout": "split"
     },
     {
       "id": "services",
       "name": "Our Services",
-      "copy": "At WISEM GLOBAL BUSINESS, we provide comprehensive manufacturing solutions tailored to meet your specific requirements. Our services include custom manufacturing, product development, quality assurance, and supply chain management. We work with businesses across multiple sectors, ensuring that every project meets international standards while remaining cost-effective for the Nigerian market. Our experienced team handles projects from concept to delivery, maintaining the highest standards of quality and efficiency throughout the manufacturing process.",
-      "imagePrompt": "Grid of manufacturing processes: CNC machines in operation, quality control inspection, product assembly line, warehouse logistics, all in modern Nigerian industrial setting, bright professional lighting, photorealistic",
+      "copy": "Comprehensive Petroleum Engineering Services\n\nPetroleum Engineering Consultancy\nExpert technical advisory services covering reservoir engineering, production optimization, well design, and field development planning. Our petroleum engineers provide data-driven insights to maximize asset value and operational efficiency.\n\nEnergy Solutions & Supply\nReliable supply of petroleum products and energy solutions tailored to industrial, commercial, and institutional clients across Nigeria. We ensure consistent product quality and timely delivery.\n\nTechnical Training & Capacity Building\nSpecialized training programs for oil and gas professionals, covering industry best practices, safety protocols, and emerging technologies in the petroleum sector.\n\nProject Management Services\nEnd-to-end project management for oil and gas operations, from feasibility studies and engineering design to execution and commissioning. We deliver projects on time and within budget.\n\nEquipment Supply & Maintenance\nProcurement and maintenance of petroleum industry equipment, tools, and technologies. We source quality equipment and provide ongoing technical support.\n\nHealth, Safety & Environmental Services\nComprehensive HSE management services ensuring compliance with Nigerian and international standards. We prioritize safety in all operations while minimizing environmental impact.",
+      "imagePrompt": "Professional montage-style photograph showing various aspects of Nigerian petroleum operations: close-up of engineer reviewing technical diagrams, petroleum storage facilities, safety equipment and gear, modern control room with monitoring screens, all set against Nigerian industrial backdrop, bright professional lighting, clean corporate photography style with blue and orange accent tones",
       "layout": "grid"
+    },
+    {
+      "id": "team",
+      "name": "Our Expertise",
+      "copy": "Led by Experienced Petroleum Engineers\n\nEddie Dee Energy Resources Limited is led by qualified petroleum engineers with extensive experience in Nigeria's oil and gas industry. Our leadership team brings decades of combined expertise in petroleum engineering, operations management, and business development.\n\nOur founder's background as a practicing petroleum engineer ensures that technical excellence remains at the core of everything we do. This engineering-first approach means our clients benefit from solutions that are not only commercially sound but technically robust.\n\nWe maintain a team of skilled professionals including petroleum engineers, process engineers, HSE specialists, and project managers—all committed to delivering world-class service to Nigeria's energy sector.\n\nOur team stays current with industry developments through continuous professional development and maintains memberships in relevant professional bodies. This commitment to excellence has earned us the trust of clients across Nigeria's oil and gas industry.",
+      "imagePrompt": "Professional corporate portrait of confident Nigerian petroleum engineer in business attire standing in front of modern oil and gas facility, wearing safety helmet held under arm, Nigerian industrial backdrop with pipelines and equipment visible, golden hour lighting, authoritative and professional corporate photography style, shallow depth of field",
+      "layout": "centered"
     },
     {
       "id": "contact",
       "name": "Contact Us",
-      "copy": "Ready to discuss your manufacturing needs? Get in touch with WISEM GLOBAL BUSINESS today. Our team is available to answer your questions and provide customized solutions for your business. Visit us at our facility in Sagamu or reach out via phone, email, or WhatsApp for immediate assistance.",
-      "imagePrompt": "Professional Nigerian business office reception area, modern furniture, welcoming atmosphere, natural light, map of Nigeria on wall, corporate setting, photorealistic",
-      "layout": "centered"
+      "copy": "Partner With Us\n\nReady to discuss your petroleum engineering needs or energy solutions requirements? Eddie Dee Energy Resources Limited is here to support your operations with technical excellence and reliable service.\n\nOur team is available to provide consultations, project quotations, and technical advisory services. Whether you're planning a new project or seeking to optimize existing operations, we bring the expertise and commitment to help you succeed.\n\nVisit our office in Sagamu, Ogun State, or reach out through any of the channels below. We look forward to partnering with you.\n\nEddie Dee Energy Resources Limited\nCabin 5, NNPC Estate, Mosimi\nSagamu, Ogun State, Nigeria\n\nPhone: +234 803 829 2418\nEmail: info@eddiedee.org\nWebsite: www.eddiedee.org\n\nBusiness Hours:\nMonday - Friday: 8:00 AM - 5:00 PM\nSaturday: 9:00 AM - 2:00 PM",
+      "imagePrompt": "Clean professional photograph of modern Nigerian business office reception area, sleek desk with company branding visible, comfortable seating area, professional Nigerian receptionist at desk, bright natural lighting through large windows, contemporary corporate interior design with blue and grey tones, welcoming atmosphere, architectural photography style",
+      "layout": "split"
     }
   ],
   "contact": {
-    "phone": "08038292418",
-    "email": "info@wisemglobal.com",
+    "phone": "+234 803 829 2418",
+    "email": "info@eddiedee.org",
     "address": "Cabin 5, NNPC Estate, Mosimi, Sagamu, Ogun State, Nigeria",
     "whatsapp": "https://wa.me/2348038292418"
   }
